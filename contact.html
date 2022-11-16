@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="structure.css">
+    <!-- Contact Page of Devin Johnson's online portfolio -->
+    <style>
+    h1 {
+      font-size: 4rem;
+    }
+    .ContactContainer {
+      max-width: 335px;
+    }
+    form {
+      background-color: #323232;
+      padding: 5px;
+      margin: 5px;
+    }
+    input[type=text],input[type=email], select, textarea {
+      width: 300px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin: 6px;
+    }
+    input:focus, textarea:focus, select:focus {
+      color: #000;
+      border-bottom: 4px solid #C20F08;
+      transition: color .4s ease-in-out, border-bottom .4s ease-in-out;
+    }
+    input[type="submit"] {
+      background: #C20F08;
+      border-radius: 10px;
+      margin-top: 15px;
+      padding: 5px;
+      border: none;
+    }
+    input[type="submit"]:hover {
+      cursor: pointer;
+      background: #f2130a;
+    }
+    </style>
+    <title>Devin Johnson | Contact</title>
+  </head>
+  <body>
+    <div id="container">  <!-- Start container -->
+      <header>
+        <a href=index.html>
+          <div id="logo"><img src="images/logodj.png" alt="Devin Johnson"></div>
+        </a>
+      </header>
+
+      <nav>  <!-- Start nav -->
+        <div id="sidenav">
+          <div id="a-holder">
+            <a href="index.html">Home</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </nav>  <!-- End nav -->
+
+
+        <div id="content">  <!-- Start content -->
+          <div class="LeftScreen">
+            <h1>Contact Me</h1>
+            <div class="ContactContainer">
+              <form method="get" target="_blank" action="https://www.w3schools.com/action_page.php">
+                <label for="firstname"></label>
+                <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                <br>
+                <label for="lastname"></label>
+                <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                <br>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <br>
+                <label for="subject"></label>
+                <textarea name="subject" id="subject" placeholder="Subject"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>  <!-- End content -->
+
+      </div>  <!-- End container -->
+  </body>
+</html>
