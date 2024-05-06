@@ -1,0 +1,283 @@
+/*
+----Light Mode----      ----Color Palette----       ----Dark Mode----
+#D2C2BC - Pale Dogwood      #5A443C - Liver         #1C1512 - Licorice
+#D6D3C6 - Bone              #716B52 - Ebony         #232119 - Eerie Black
+#FEBD91 - Peach             #993E01 - Brown         #2F1300 - Black Bean
+#E8CBAE - Desert Sand       #875726 - Coyote        #2A1B0C - Bistre
+#E6D2C1 - Champagne Pink    #A37042 - Chamoisee     #332315 - Bistre
+*/
+
+/* Global 
+-----------------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #222222;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0;
+}
+
+h2 {
+    font-size: 4em;
+    font-weight: 800;
+    font-style: italic;
+    color: #111111;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+/* Header 
+-----------------------------------------*/
+
+#main-background {
+    margin-top: 46px;
+    background: linear-gradient(to bottom, rgba(108, 145, 194, 1),rgba(152, 173, 214, 1));
+}
+
+#soft-dev {
+    font-size: 2em;
+    padding-top: 250px;
+    padding-right: 50px;
+    float: right;
+}
+
+#my-name {
+    font-size: 9em;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 10px #858585, 0 0 20px #373F47;
+    }
+}
+
+/* Nav Bar
+-----------------------------------------*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #6C91C2;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    color: #121212;
+    padding: 14px 26px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #7f9dc4;
+}
+
+.download {
+    background: #58759c;
+}
+
+/* About Section
+-----------------------------------------*/
+
+.about {
+    background: #98add6;
+}
+
+#about > div {
+    background: #8ea5d2;
+    border-radius: 25px 25px 0px 0px;
+}
+
+/* Skills Section
+-----------------------------------------*/
+
+.skills {
+    background: linear-gradient(to bottom, rgba(152, 173, 214, 1),rgba(195, 201, 233, 1));
+}
+
+#skills > div {
+    background: linear-gradient(to bottom, rgba(142, 165, 210, 1),rgba(184, 191, 229, 1));
+}
+
+#skills-list li {
+    font-size: 1.3em;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background: #9ba5df;
+    border-radius: 10px;
+}
+
+#skills-list li:hover {
+    background: #818eda;
+}
+
+.keyboard-img {
+    width: 100%;
+}
+
+/* Education Section
+-----------------------------------------*/
+
+.education {
+    background: #C3C9E9;
+}
+
+#education > div {
+    background: #b8bfe5;
+}
+
+/* Contact Section
+-----------------------------------------*/
+
+.contact {
+    background: #C3C9E9;
+}
+
+#contact > div {
+    background: #b8bfe5;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.contact-info {
+    text-align: center;
+    padding: 100px 0px 100px 0;
+}
+
+.email-info {
+    color: #121212;
+    font-size: 2em;
+    position: relative;
+}
+
+.email-info::before {
+    display: block;
+    font-size: 1.5em;
+    content: "\1F4E7";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.email-info:hover {
+    color: #875726;
+}
+
+/* Footer
+-----------------------------------------*/
+
+#footer {
+    background: #C3C9E9;
+}
+
+/* Media Queries
+-----------------------------------------*/
+
+@media screen and (max-width: 875px) {
+    nav {
+        position: static;
+        width: auto;
+    }
+    nav li {
+        display: block; 
+    }
+    #main-background {
+        margin-top: 0px;
+    }
+
+    #my-name {
+        font-size: 12vw;
+    }
+    #soft-dev {
+        font-size: 5vw;
+        padding-top: 50%;
+    }
+    .skills .row {
+        display: block;
+    }
+    .keyboard-img {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .col-left {
+        float: left;
+        width: 30%;
+        min-height: 175px;
+    }
+    .col-right {
+        float: left;
+        width: 70%;
+        padding-left: 180px;
+        min-height: 175px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #main-background {
+        max-width: 100%;
+    }
+    .contact-info {
+        overflow-wrap: break-word;
+    }
+    .email-info::before {
+        text-decoration: none;
+        position: relative;
+        top: 20px;
+    }
+}
