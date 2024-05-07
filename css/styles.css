@@ -28,6 +28,17 @@ h2 {
     font-weight: 800;
     font-style: italic;
     color: #111111;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    background: #9ba5df;
+    position: absolute;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    width: 20%;
 }
 
 h3 {
@@ -67,7 +78,7 @@ p {
 
 #main-background {
     margin-top: 46px;
-    background: linear-gradient(to bottom, rgba(108, 145, 194, 1),rgba(152, 173, 214, 1));
+    background: linear-gradient(to bottom, rgba(108, 145, 194, 1),rgb(223, 223, 223));
 }
 
 #soft-dev {
@@ -132,11 +143,11 @@ nav li a:hover {
 -----------------------------------------*/
 
 .about {
-    background: #98add6;
+    background: #dfdfdf;
 }
 
 #about > div {
-    background: #8ea5d2;
+    background: #f1f1f1;
     border-radius: 25px 25px 0px 0px;
 }
 
@@ -144,11 +155,11 @@ nav li a:hover {
 -----------------------------------------*/
 
 .skills {
-    background: linear-gradient(to bottom, rgba(152, 173, 214, 1),rgba(195, 201, 233, 1));
+    background: #dfdfdf;
 }
 
 #skills > div {
-    background: linear-gradient(to bottom, rgba(142, 165, 210, 1),rgba(184, 191, 229, 1));
+    background: #f1f1f1;
 }
 
 #skills-list li {
@@ -164,7 +175,7 @@ nav li a:hover {
     background: #818eda;
 }
 
-.keyboard-img {
+.info-images {
     width: 100%;
 }
 
@@ -172,22 +183,22 @@ nav li a:hover {
 -----------------------------------------*/
 
 .education {
-    background: #C3C9E9;
+    background: #dfdfdf;
 }
 
 #education > div {
-    background: #b8bfe5;
+    background: #f1f1f1;
 }
 
 /* Contact Section
 -----------------------------------------*/
 
 .contact {
-    background: #C3C9E9;
+    background: #dfdfdf;
 }
 
 #contact > div {
-    background: #b8bfe5;
+    background: #f1f1f1;
     border-radius: 0px 0px 25px 25px;
 }
 
@@ -214,14 +225,14 @@ nav li a:hover {
 }
 
 .email-info:hover {
-    color: #875726;
+    color: #4b4b4b;
 }
 
 /* Footer
 -----------------------------------------*/
 
 #footer {
-    background: #C3C9E9;
+    background: #dfdfdf;
 }
 
 /* Media Queries
@@ -249,7 +260,7 @@ nav li a:hover {
     .skills .row {
         display: block;
     }
-    .keyboard-img {
+    .info-images {
         flex-direction: column;
     }
 }
